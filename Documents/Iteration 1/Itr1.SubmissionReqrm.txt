@@ -1,0 +1,32 @@
+Submission:
+
+    Report: Create a PDF file, named <XX>.pdf, where <XX> is your student number. 
+    (Project report format guidelines are provided in Appendix A.) 
+    The PDF file should include your full name, email address and phone number. 
+    (We may need to contact you during testing). 
+    
+    Code: 
+    Create one folder, named Code_<XX>, where <XX> is your student number. 
+    It should contain a README file and the Visual Studio 2019 Solution / CMake 
+    code folder with all your code (integrated with Autotester) or the that we 
+    will build, run and test.
+    
+    Test Cases: 
+    Create one folder, named Tests_<XX>, where <XX> is your student number. 
+    It should contain all your system acceptance test cases for at least ONE 
+    SIMPLE program and FIVE queries. 
+    
+    Place the report and the two folders in another folder named <XX>, and archive 
+    it in a file named <XX>.zip. Submit the archive to 
+    LumiNUS -> TIC2003 -> Files -> Student Submission -> Iteration 1.
+    
+    Detailed guidelines for LumiNUS submission are given in Appendix B.
+    
+    You should submit only one copy of the report and code. For multiple submissions 
+    received from the same student, we will mark the most recent one.
+    
+    You are strongly advised to carefully read all sections of this document to understand 
+    the requirements. When in doubt, contact the teaching team as soon as possible for 
+    clarifications.
+    
+    This iteration accounts for 15% of the final grade. See Section 6 for the rough marking scheme.

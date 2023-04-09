@@ -1,0 +1,38 @@
+verify these:
+* Two procedures cannot have the same name. 
+  its handled by DB because col is PK but what is the error handling? 
+  should be- do not process the proc and abandon processing
+* Procedure names cannot be the same as variable names. 
+  ToDo - check piazza reply
+* Constants are sequences of digits. If more than one digit, the first digit cannot be 0
+  ToDo - check piazza reply
+
+Need new QueryParser class
+
+update fetchToken to handle expr 
+
+update Assignment -- add expr
+===============================================
+
+if nextToken is var_name
+		// production: assign: ITER1 => var_name ‘=’ factor ‘;’
+    // production: assign: ITER2 => var_name ‘=’ expr ‘;’
+    // production: expr: expr ‘+’ term | expr ‘-’ term | term
+		// production: factor: var_name | const_value | ‘(’ expr ‘)’
+    // this is equivalent of saying "recurse(wind) till its a var_name or const_value 
+    
+			lookAhead for '=', if not '='
+				errString "statement syntax error: expecting = after var_name"
+				return 0
+			writeDB symbol table var_name
+			
+			*expand* lookAhead- add enum 'factor'
+			*expand*          - if nextToken is var_name or const_value return 1/true
+			*expand*          - set sym to var_name or const_value
+			*expand* lookahead for 'factor', if not factor
+			*expand* 	errString "statement syntax error: expecting factor after = in assignment stmt"
+			*expand* 	return 0
+			*expand*	if sym = var_name or const_value
+			*expand*		writeDB
+			*expand*		LookAhead for ';', if not ';'
+							errString "statement syntax error: expecting ; after factor in assignment"

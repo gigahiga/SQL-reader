@@ -1,0 +1,19 @@
+procedure p1{ 
+    read milk;
+    cow = milk;
+    while (milk == 10) {
+         hippo =  cow * 5;         
+         print hippo;  	
+    }
+}
+procedure p2{         
+         frog = hippo;
+         print hippo;
+}
+procedure p3 { 
+   if(frog == 9) then {
+       frog = milk;
+   } else {
+      frog = frog + 5;
+   }
+} 

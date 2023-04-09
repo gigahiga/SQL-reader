@@ -1,0 +1,13 @@
+1. add enum - factor
+2. update lookAhead- factor
+
+*expand* lookAhead- add enum 'factor'
+*expand*          - if nextToken is var_name or const_value return 1/true
+*expand*          - set sym to var_name or const_value
+*expand* lookahead for 'factor', if not factor
+*expand* 	errString "statement syntax error: expecting factor after = in assignment stmt"
+*expand* 	return 0
+*expand*	if sym = var_name or const_value
+*expand*		writeDB
+*expand*		LookAhead for ';', if not ';'
+		errString "statement syntax error: expecting ; after factor in assignment"

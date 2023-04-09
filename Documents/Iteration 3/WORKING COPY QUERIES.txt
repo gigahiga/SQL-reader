@@ -1,0 +1,46 @@
+1 - UsesNormalvalid
+assign a; 
+Select a such that Uses(a,"frog")
+6, 9, 10
+5000
+2 - Modifies
+assign a; variable v;
+Select a such that Modifies(a,"milk")
+2, 9
+5000
+3 - Modifies
+assign a; variable v;
+Select a such that Modifies(a,"cow")
+4
+5000
+4 - Modifies
+read r;
+Select r such that Modifies(r,"cow")
+none
+5000
+5 - Modifies
+read r;
+Select r such that Modifies(r,"milk") 
+1
+5000
+6 - Modifies
+stmnt s;
+Select s such that Modifies(2,"cow") 
+none
+5000
+7 - ParentNormal
+stmt s; variable v;
+Select s such that Parent(s,v)
+10, 4, 5, 9
+5000
+8 - Parent
+stmt s;
+Select s such that Parent(s,3)
+none
+5000
+9 - Parent
+stmt s; 
+Select s such that Parent(8,_)
+9, 10
+5000
+

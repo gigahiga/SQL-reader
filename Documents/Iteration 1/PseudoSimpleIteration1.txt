@@ -1,0 +1,128 @@
+
+private var int                  : lineNo (constructor default to 0)  
+private var enum Symbol : sym
+private var string             : errString
+
+failExit:	
+	//error exit handler
+	print errString
+	// no need wipeDB: symbol table  done by initDB 
+	?? what else ??
+	return 1
+
+program(): 
+	// iteration 1: only 1 proc - imm go into descent algo
+	// iteration 2: loop through all proc blocks
+		 
+	fetchToken() into sym
+	if fetch ok		
+		call procBlock(pass pointer to token[1]) --?? how to do the pointer/reference thingy?
+		if procBlock fail
+			call failExit
+		lookAhead(curlyClose)
+	else fetch fail
+		prompt error
+	end program
+
+fetchToken:
+	match token a predefined Symbol type and set into private var sym
+	if fetch ok - return 1
+	else          - return 0
+	end fetchToken
+
+lookAhead(nextToken):
+	fetchToken into sym
+	if sym == nextToken
+		return 1
+	else	return 0
+ 	end expect
+
+
+
+procBlock:
+	if sym/Token "procedure"- sym == "procedure"
+		//production: procedure: ‘procedure’ proc_name ‘{‘ stmtLst ‘}’ 
+		lookAhead(name): if nextToken not name
+			errString "proc syntax error: expecting proc_name"
+			?? handle @ program() recurse up to call failExit
+			return 0
+	writeDB symbol table proc_name  //write @ this moment? or when everything passed?
+	lookAhead(curlyOpen): if nextToken not '{' 
+		errString "proc syntax error: expecting { "		
+		return 0	
+	// guessing: don't know what statementList() returns?
+                //                  follow return 1 = pass, 0 = fail
+	if statementList() fail 
+		// statementList will set errString
+		?? handle @ program() recurse up to call failExit
+		return 0
+	//lookAhead(curlyClose): if nextToken not '}' 
+	if sym not curlyClose -- statementList did the lookAhead loading to sym
+		errString "proc syntax error: expecting } "
+		?? handle @ program() recurse up to call failExit
+		return 0	
+	return 1
+	end procBlock
+
+statementList:
+	loop till curlyClose i.e. while lookAhead(curlyClose) fail
+		// production: read: ‘read’ var_name’;’
+		if nextToken is 'keyRead' 
+			lookahead(name): if not name
+				errString "statement syntax error: expecting var_name after read"
+				return 0
+			writeDB symbol table var_name
+			lookahead(';'): if not semicolon
+				errString "statement syntax error: expecting ; after var_name in read"
+				return 0
+			
+		if nextToken is 'keyPrint'
+		// production: print: ‘print’ var_name;
+			lookahead(name): if not name
+				errString "statement syntax error: expecting var_name after print"
+				return 0
+			writeDB symbol table var_name 
+			lookAhead for ';' if not ';'
+				errString "statement syntax error: expecting ; after var_name in print"
+				return 0
+		
+		if nextToken is var_name
+		// production: assign: var_name ‘=’ factor ‘;’
+			
+			lookAhead for '=', if not '='
+				errString "statement syntax error: expecting = after var_name"
+				return 0
+			writeDB symbol table var_name
+			
+			*expand* lookAhead- add enum 'factor'
+			*expand*          - if nextToken is var_name or const_value return 1/true
+			*expand*          - set sym to var_name or const_value
+			*expand* lookahead for 'factor', if not factor
+			*expand* 	errString "statement syntax error: expecting factor after = in assignment stmt"
+			*expand* 	return 0
+			*expand*	if sym = var_name or const_value
+			*expand*		writeDB
+			*expand*		LookAhead for ';', if not ';'
+							errString "statement syntax error: expecting ; after factor in assignment"
+			
+				
+			lookAhead for ';' if not ';'
+				errString "statement syntax error: expecting ; after factor in assignment stmt"
+				return 0
+			
+		// bad token - exit 
+		if nextToken is bad
+			errString 'bad syntax in proc stmnt'
+			exitFail
+			return 0		
+	end loop
+	// loop stops on curly close
+	return 1
+	end statementList
+
+
+		
+
+
+		  
+		

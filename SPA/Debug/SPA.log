@@ -1,0 +1,20 @@
+﻿  QParser.cpp
+C:\Users\Urosevic\Desktop\HARDDISK\ITER 2\A0227505J_A0227199R\source\QParser.cpp(390,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Urosevic\Desktop\HARDDISK\ITER 2\A0227505J_A0227199R\source\QParser.cpp(417,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Urosevic\Desktop\HARDDISK\ITER 2\A0227505J_A0227199R\source\QParser.cpp(456,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Urosevic\Desktop\HARDDISK\ITER 2\A0227505J_A0227199R\source\QParser.cpp(483,22): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Urosevic\Desktop\HARDDISK\ITER 2\A0227505J_A0227199R\source\QParser.cpp(536,24): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Urosevic\Desktop\HARDDISK\ITER 2\A0227505J_A0227199R\source\QParser.cpp(567,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Urosevic\Desktop\HARDDISK\ITER 2\A0227505J_A0227199R\source\QParser.cpp(3483,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Urosevic\Desktop\HARDDISK\ITER 2\A0227505J_A0227199R\source\QParser.cpp(763): warning C4715: 'QueryParser::entRef': not all control paths return a value
+C:\Users\Urosevic\Desktop\HARDDISK\ITER 2\A0227505J_A0227199R\source\QParser.cpp(1012): warning C4715: 'QueryParser::modifiesP': not all control paths return a value
+C:\Users\Urosevic\Desktop\HARDDISK\ITER 2\A0227505J_A0227199R\source\QParser.cpp(969): warning C4715: 'QueryParser::modifies': not all control paths return a value
+C:\Users\Urosevic\Desktop\HARDDISK\ITER 2\A0227505J_A0227199R\source\QParser.cpp(1064): warning C4715: 'QueryParser::usesLsyn': not all control paths return a value
+C:\Users\Urosevic\Desktop\HARDDISK\ITER 2\A0227505J_A0227199R\source\QParser.cpp(1249): warning C4715: 'QueryParser::usesP': not all control paths return a value
+C:\Users\Urosevic\Desktop\HARDDISK\ITER 2\A0227505J_A0227199R\source\QParser.cpp(1451): warning C4715: 'QueryParser::parentT': not all control paths return a value
+C:\Users\Urosevic\Desktop\HARDDISK\ITER 2\A0227505J_A0227199R\source\QParser.cpp(2384): warning C4715: 'QueryParser::nextT': not all control paths return a value
+C:\Users\Urosevic\Desktop\HARDDISK\ITER 2\A0227505J_A0227199R\source\QParser.cpp(2427): warning C4715: 'QueryParser::calls': not all control paths return a value
+C:\Users\Urosevic\Desktop\HARDDISK\ITER 2\A0227505J_A0227199R\source\QParser.cpp(2470): warning C4715: 'QueryParser::callsT': not all control paths return a value
+C:\Users\Urosevic\Desktop\HARDDISK\ITER 2\A0227505J_A0227199R\source\QParser.cpp(3363): warning C4715: 'QueryParser::isQsymDeclaredSynonym': not all control paths return a value
+C:\Users\Urosevic\Desktop\HARDDISK\ITER 2\A0227505J_A0227199R\source\QParser.cpp(2342): warning C4715: 'QueryParser::next': not all control paths return a value
+  SPA.vcxproj -> C:\Users\Urosevic\Desktop\HARDDISK\ITER 2\A0227505J_A0227199R\Debug\SPA.lib

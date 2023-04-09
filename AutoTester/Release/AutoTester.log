@@ -1,0 +1,9 @@
+﻿  TestWrapper.cpp
+C:\Users\Urosevic\Desktop\TIC PROJECT\WIN_StartupSPASolution\source\SParser.h(55,1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Urosevic\Desktop\TIC PROJECT\WIN_StartupSPASolution\AutoTester\source\TestWrapper.cpp(19,39): warning C4356: 'AbstractWrapper::GlobalStop': static data member cannot be initialized via derived class
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+C:\Users\Urosevic\Desktop\TIC PROJECT\WIN_StartupSPASolution\source\SParser.cpp(230): warning C4715: 'SimpleParser::procBlock': not all control paths return a value
+  All 2678 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  AutoTester.vcxproj -> C:\Users\Urosevic\Desktop\TIC PROJECT\WIN_StartupSPASolution\Release\AutoTester.exe

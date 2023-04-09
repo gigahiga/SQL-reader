@@ -1,0 +1,9 @@
+﻿  QueryProcessor.cpp
+  SourceProcessor.cpp
+C:\Users\Urosevic\Desktop\TIC PROJECT\WIN_StartupSPASolution\source\SParser.h(55,1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  Database.cpp
+  SParser.cpp
+C:\Users\Urosevic\Desktop\TIC PROJECT\WIN_StartupSPASolution\source\SParser.h(55,1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  Tokenizer.cpp
+  sqlite3.c
+  SPA.vcxproj -> C:\Users\Urosevic\Desktop\TIC PROJECT\WIN_StartupSPASolution\Release\SPA.lib
